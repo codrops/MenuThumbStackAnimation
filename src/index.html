@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Menu Thumb Stack Animation | Codrops</title>
+		<meta name="description" content="An animation on a vertical image stack for a menu that expands to arrange the stack items on a horizontal line." />
+		<meta name="keywords" content="animation, stack, menu, letters, javascript, gsap" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://use.typekit.net/ytn8osp.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+	</head>
+	<body class="loading">
+		<main>
+			<div class="frame">
+				<h1 class="frame__title">Menu Thumb Stack Animation</h1>
+				<nav class="frame__links">
+					<a class="hover-line" href="http://tympanus.net/Tutorials/SurfaceSampling/">Previous demo</a>
+					<a class="hover-line" href="https://tympanus.net/codrops/?p=56500&preview=true">Article</a>
+					<a class="hover-line" href="https://github.com/codrops/MenuThumbStackAnimation">GitHub</a>
+				</nav>
+				<div class="frame__author"><a href="https://www.twitter.com/codrops">@codrops</a></div>
+			</div>
+			<div class="stack-wrap" aria-hidden="true">
+				<div class="stack" id="stack-1">
+					<img class="stack__img" src="img/1.jpg" alt="Some image" />
+					<img class="stack__img" src="img/2.jpg" alt="Some image" />
+					<img class="stack__img" src="img/3.jpg" alt="Some image" />
+					<img class="stack__img" src="img/4.jpg" alt="Some image" />
+					<img class="stack__img" src="img/5.jpg" alt="Some image" />
+					<img class="stack__img" src="img/6.jpg" alt="Some image" />
+					<img class="stack__img" src="img/7.jpg" alt="Some image" />
+				</div>
+				<div class="stack" id="stack-2">
+					<img class="stack__img" src="img/8.jpg" alt="Some image" />
+					<img class="stack__img" src="img/9.jpg" alt="Some image" />
+					<img class="stack__img" src="img/10.jpg" alt="Some image" />
+					<img class="stack__img" src="img/11.jpg" alt="Some image" />
+					<img class="stack__img" src="img/12.jpg" alt="Some image" />
+					<img class="stack__img" src="img/13.jpg" alt="Some image" />
+					<img class="stack__img" src="img/14.jpg" alt="Some image" />
+				</div>
+				<div class="stack" id="stack-3">
+					<img class="stack__img" src="img/15.jpg" alt="Some image" />
+					<img class="stack__img" src="img/16.jpg" alt="Some image" />
+					<img class="stack__img" src="img/17.jpg" alt="Some image" />
+					<img class="stack__img" src="img/18.jpg" alt="Some image" />
+					<img class="stack__img" src="img/19.jpg" alt="Some image" />
+					<img class="stack__img" src="img/20.jpg" alt="Some image" />
+					<img class="stack__img" src="img/21.jpg" alt="Some image" />
+				</div>
+				<div class="stack" id="stack-4">
+					<img class="stack__img" src="img/22.jpg" alt="Some image" />
+					<img class="stack__img" src="img/23.jpg" alt="Some image" />
+					<img class="stack__img" src="img/24.jpg" alt="Some image" />
+					<img class="stack__img" src="img/25.jpg" alt="Some image" />
+					<img class="stack__img" src="img/26.jpg" alt="Some image" />
+					<img class="stack__img" src="img/27.jpg" alt="Some image" />
+					<img class="stack__img" src="img/28.jpg" alt="Some image" />
+				</div>
+				<div class="stack" id="stack-5">
+					<img class="stack__img" src="img/29.jpg" alt="Some image" />
+					<img class="stack__img" src="img/30.jpg" alt="Some image" />
+					<img class="stack__img" src="img/31.jpg" alt="Some image" />
+					<img class="stack__img" src="img/32.jpg" alt="Some image" />
+					<img class="stack__img" src="img/33.jpg" alt="Some image" />
+					<img class="stack__img" src="img/34.jpg" alt="Some image" />
+					<img class="stack__img" src="img/35.jpg" alt="Some image" />
+				</div>
+				<div class="stack" id="stack-6">
+					<img class="stack__img" src="img/36.jpg" alt="Some image" />
+					<img class="stack__img" src="img/37.jpg" alt="Some image" />
+					<img class="stack__img" src="img/38.jpg" alt="Some image" />
+					<img class="stack__img" src="img/39.jpg" alt="Some image" />
+					<img class="stack__img" src="img/40.jpg" alt="Some image" />
+					<img class="stack__img" src="img/41.jpg" alt="Some image" />
+					<img class="stack__img" src="img/42.jpg" alt="Some image" />
+				</div>
+			</div>
+			<nav class="menu menu--open">
+				<a class="menu__item" data-stack="stack-1" data-content="content-1">Cogno Frank</a>
+				<a class="menu__item" data-stack="stack-2" data-content="content-2">Loca di Marta</a>
+				<a class="menu__item" data-stack="stack-3" data-content="content-3">Missy Mac Blue</a>
+				<a class="menu__item" data-stack="stack-4" data-content="content-4">Luxtroc Chunk</a>
+				<a class="menu__item" data-stack="stack-5" data-content="content-5">Muck Galli</a>
+				<a class="menu__item" data-stack="stack-6" data-content="content-6">Iris Catapult</a>
+			</nav>
+			<section class="content-wrap">
+				<div class="content" id="content-1">
+					<h2 class="content__title">Cogno Frank</h2>
+					<p class="content__text">
+						My cold human, you inspire me to write.<br>
+						I love the way you pray, resist and fly,<br>
+						Invading my mind day and through the night,<br>
+						Always dreaming about the hot hereby.<br>
+					</p>
+				</div>
+				<div class="content" id="content-2">
+					<h2 class="content__title">Loca di Marta</h2>
+					<p class="content__text">
+						Let me compare you to a green balloon?<br>
+						You are more dandy, bandy and freaky.<br>
+						Big sun heats the handy peaches of June,<br>
+						And summertime has the randy rekey.<br>
+					</p>
+				</div>
+				<div class="content" id="content-3">
+					<h2 class="content__title">Missy Mac Blue</h2>
+					<p class="content__text">
+						How do I love you? Let me count the ways.<br>
+						I love your lovely heart, soul and head.<br>
+						Thinking of your sandy soul fills my days.<br>
+						My love for you is the cheeky embed.<br>
+					</p>
+				</div>
+				<div class="content" id="content-4">
+					<h2 class="content__title">Luxtroc Chunk</h2>
+					<p class="content__text">
+						My cold human, you inspire me to write.<br>
+						I love the way you pray, resist and fly,<br>
+						Invading my mind day and through the night,<br>
+						Always dreaming about the hot hereby.<br>
+					</p>
+				</div>
+				<div class="content" id="content-5">
+					<h2 class="content__title">Muck Galli</h2>
+					<p class="content__text">
+						Let me compare you to a green balloon?<br>
+						You are more dandy, bandy and freaky.<br>
+						Big sun heats the handy peaches of June,<br>
+						And summertime has the randy rekey.<br>
+					</p>
+				</div>
+				<div class="content" id="content-6">
+					<h2 class="content__title">Iris Catapult</h2>
+					<p class="content__text">
+						How do I love you? Let me count the ways.<br>
+						I love your lovely heart, soul and head.<br>
+						Thinking of your sandy soul fills my days.<br>
+						My love for you is the cheeky embed.<br>
+					</p>
+				</div>
+				<div class="content" id="content-7">
+					<h2 class="content__title">Iris Catapult</h2>
+					<p class="content__text">
+						My cold human, you inspire me to write.<br>
+						I love the way you pray, resist and fly,<br>
+						Invading my mind day and through the night,<br>
+						Always dreaming about the hot hereby.<br>
+					</p>
+				</div>
+				<div class="content" id="content-8">
+					<h2 class="content__title">Anthony Gun</h2>
+					<p class="content__text">
+						Let me compare you to a green balloon?<br>
+						You are more dandy, bandy and freaky.<br>
+						Big sun heats the handy peaches of June,<br>
+						And summertime has the randy rekey.<br>
+					</p>
+				</div>
+				<button class="unbutton close"><span class="close__cross">&#10539;</span><span>Close</span></button>
+			</section>
+			<svg class="circle" vector-effect="non-scaling-stroke" width="1600" height="1600"><circle vector-effect="non-scaling-stroke" cx="800" cy="800" r="330" data-svg-origin="800 800" transform="matrix(1,0,0,1,0,0)" style="transform-origin: 0px 0px;"></circle></svg>
+		</main>
+		<script src="js/index.js"></script>
+	</body>
+</html>
